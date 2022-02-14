@@ -14,12 +14,12 @@ const Ship = () => {
 
   return (
     <Box sx={{ padding: 1 }}>
-      <Grid>
-        <Grid item xs={12} sx={{ margin: 1, height: 140 }}>
-          <Box sx={{ backgroundImage: `url(${getCountryImage(shipCountry)})`, 
+      <Grid container spacing={1}>
+        <Grid item xs={12} >
+          <Box sx={{ backgroundColor: 'lightblue',
+            backgroundImage: `url(${getCountryImage(shipCountry)})`, 
             backgroundPosition: 'center', 
             backgroundSize: 'cover', 
-            height: '140',
             textAlign: 'center' }}
           >
             <Box
@@ -30,27 +30,31 @@ const Ship = () => {
                 color: 'white',
                 padding: '10px',
               }}>
-              <Typography variant="h1">{ship.name}</Typography>
+              <Typography variant="h2">{ship.name}</Typography>
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={6} sx={{ margin: 2 }}>
-          <Typography variant="h5">General information</Typography>
-          <Typography color="text.secondary">
-            <div>Country of origin: {shipCountry}</div>
-            <div>Built: {ship.built}</div>
-            <div>Name: {ship.name}</div>
-            <div>Owner: {ship.owner}</div>
-          </Typography>
+        <Grid item xs={6}>
+          <Box sx={{ textAlign: 'center', marginTop: 3 }}>
+            <Typography variant="h5">General information</Typography>
+            <Typography color="text.secondary">
+              <div>Country of origin: {shipCountry}</div>
+              <div>Built: {ship.built}</div>
+              <div>Name: {ship.name}</div>
+              <div>Owner: {ship.owner}</div>
+            </Typography>
+          </Box>
         </Grid>
-        <Grid item xs={6} sx={{ margin: 2 }}>
-          <Typography variant="h5">Technical information</Typography>
-          <Typography color="text.secondary">
-            <div>Length in meters: {ship.lengthMeters}</div>
-            <div>Beam meters: {ship.beamMeters}</div>
-            <div>TEU: {ship.maxTEU}</div>
-            <div>Gross tonnage: {ship.grossTonnage}</div>
-          </Typography>
+        <Grid item xs={6}>
+          <Box sx={{ textAlign: 'center', marginTop: 3 }}>
+            <Typography variant="h5">Technical information</Typography>
+            <Typography color="text.secondary">
+              <div>Length in meters: {ship.lengthMeters}</div>
+              <div>Beam meters: {ship.beamMeters}</div>
+              <div>TEU: {ship.maxTEU}</div>
+              <div>Gross tonnage: {ship.grossTonnage}</div>
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
     </Box>
