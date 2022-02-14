@@ -1,15 +1,15 @@
-import React from 'react'
-import { Grid, Card, CardContent, Typography, Box } from '@mui/material'
-import { useHistory } from 'react-router-dom'
+import React from 'react';
+import { Grid, Card, CardContent, Typography, Box } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 
-import { getShipCountry } from '../utils/helpers'
+import { getShipCountry } from '../utils/helpers';
 
 const CardItem = (props) => {
-  let ship = props.ship
-  const history = useHistory()
+  let ship = props.ship;
+  const history = useHistory();
 
   const handleClick = (id) => {
-    history.push(`/ship/${id}`)
+    history.push(`/ship/${id}`);
   }
 
   return (
@@ -17,7 +17,7 @@ const CardItem = (props) => {
       <Card elevation={5} onClick={() => handleClick(ship.id)}>
         <React.Fragment>
           <CardContent>
-            <Box sx={{ backgroundColor: 'lightblue', padding: 1, marginBottom: .5 }}>
+            <Box sx={{ backgroundColor: 'lightblue', padding: 1, marginBottom: .5, borderRadius: 2 }}>
               <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 Ship #{ship.id}
               </Typography>
@@ -35,7 +35,7 @@ const CardItem = (props) => {
         </React.Fragment>
       </Card>
     </Grid>
-  )
+  );
 }
 
 export default CardItem

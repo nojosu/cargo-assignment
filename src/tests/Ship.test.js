@@ -1,7 +1,7 @@
-import React from 'react'
-import '@testing-library/jest-dom/extend-expect'
-import { render } from '@testing-library/react'
-import Ship from '../views/Ship'
+import React from 'react';
+import '@testing-library/jest-dom/extend-expect';
+import { render } from '@testing-library/react';
+import Ship from '../views/Ship';
 
 describe('Ship', () => {
   test('renders built, name, length, beam, TEU, owner, and gross tonnage fields', () => {
@@ -17,7 +17,7 @@ describe('Ship', () => {
 
     const view = render(
       <Ship ship={ship} />
-    )
+    );
 
     expect(view.container).toHaveTextContent(ship.built)
     expect(view.container).toHaveTextContent(ship.name)
@@ -26,7 +26,7 @@ describe('Ship', () => {
     expect(view.container).toHaveTextContent(ship.maxTEU)
     expect(view.container).toHaveTextContent(ship.owner)
     expect(view.container).toHaveTextContent(ship.grossTonnage)
-  })
+  });
 
   test('renders country when available', () => {
     const ship = {
@@ -41,8 +41,8 @@ describe('Ship', () => {
 
     const view = render(
       <Ship ship={ship} />
-    )
+    );
 
     expect(view.container).toHaveTextContent('Australia')
-  })
-})
+  });
+});
