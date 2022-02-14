@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { getShipCountry } from '../utils/helpers';
 
 const CardItem = (props) => {
-  let ship = props.ship;
+  const ship = props.ship;
   const history = useHistory();
 
   const handleClick = (id) => {
