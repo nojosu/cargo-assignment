@@ -38,10 +38,10 @@ const Ship = () => {
           <Box sx={{ textAlign: 'center', marginTop: 3 }}>
             <Typography variant="h5">General information</Typography>
             <Typography color="text.secondary">
-              <div>Country of origin: {shipCountry}</div>
-              <div>Built: {ship.built}</div>
-              <div>Name: {ship.name}</div>
-              <div>Owner: {ship.owner}</div>
+              Country of origin: {shipCountry}
+              Built: {ship.built}
+              Name: {ship.name}
+              Owner: {ship.owner}
             </Typography>
           </Box>
         </Grid>
@@ -49,10 +49,10 @@ const Ship = () => {
           <Box sx={{ textAlign: 'center', marginTop: 3 }}>
             <Typography variant="h5">Technical information</Typography>
             <Typography color="text.secondary">
-              <div>Length in meters: {ship.lengthMeters}</div>
-              <div>Beam meters: {ship.beamMeters}</div>
-              <div>TEU: {ship.maxTEU}</div>
-              <div>Gross tonnage: {ship.grossTonnage}</div>
+              Length in meters: {ship.lengthMeters}
+              Beam meters: {ship.beamMeters}
+              TEU: {ship.maxTEU}
+              Gross tonnage: {ship.grossTonnage}
             </Typography>
           </Box>
         </Grid>
