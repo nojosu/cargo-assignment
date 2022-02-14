@@ -28,7 +28,6 @@ export const getShipCountry = (shipOwner) => {
 
 // Return a different background image depending on the country
 export const getCountryImage = (country) => {
-  console.log(country);
   if (country === "Hong Kong" || country === "HK") {
     return HongKong;
   } else if (country === "Germany") {
