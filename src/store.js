@@ -6,7 +6,6 @@ import shipReducer from './reducers/ships';
 
 const reducer = combineReducers({
   ships: shipReducer,
-  //notification: notificationReducer,
 });
 
 export default createStore(reducer, composeWithDevTools(

@@ -1,11 +1,11 @@
-import shipService from '../services/ships'
+import shipService from '../services/ships';
 
 const reducer = (state = [], action) => {
   switch (action.type) {
   case 'INIT':
-    return action.data
+    return action.data;
   default:
-    return state
+    return state;
   }
 }
 
@@ -16,8 +16,8 @@ export const initializeShips = () => {
     dispatch({
       type: 'INIT',
       data
-    })
+    });
   }
 }
 
-export default reducer
+export default reducer;

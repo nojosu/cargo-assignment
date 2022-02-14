@@ -1,36 +1,25 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   BrowserRouter as Router,
-  Switch, Route, Link
-} from 'react-router-dom'
+  Switch, Route,
+} from 'react-router-dom';
 
-import { initializeShips } from './reducers/ships'
-import Ships from './components/Ships'
-import Ship from './components/Ship'
+import { initializeShips } from './reducers/ships';
+import Ships from './components/Ships';
+import Ship from './components/Ship';
+import NavBar from './components/NavBar';
 
 const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(initializeShips())
-  }, [dispatch])
-
-  const padding = {
-    padding: 5
-  }
-
-  const navStyle = {
-    margin: 10,
-    padding: 10,
-    backgroundColor: 'lightblue'
-  }
+  }, [dispatch]);
 
   return (
     <Router>
-      <div style={navStyle}>
-        <Link style={padding} to="/">Home</Link>
-      </div>
+      <NavBar />
 
       <Switch>
         <Route path="/ship/:id">
@@ -42,7 +31,7 @@ const App = () => {
       </Switch>
 
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
