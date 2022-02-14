@@ -14,9 +14,9 @@ const CardItem = (props) => {
 
   return (
     <Grid item xs={6} md={4}>
-      <Box sx={{ minHeight: 250, minWidth: 180 }}>
+      <Box sx={{ minWidth: 180 }}>
         <CardActionArea onClick={() => handleClick(ship.id)}>
-          <Card elevation={5}>
+          <Card elevation={5} sx={{ minHeight: 260}}>
               <React.Fragment>
                 <CardContent>
                   <Box sx={{ backgroundColor: 'lightblue', 
